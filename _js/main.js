@@ -34,10 +34,10 @@ new ScrollScene({
   triggerElement: '#app-banner-body',
   triggerHook: 'onLeave',
   downCallback: function() {
-    $('#app-banner-nav').hide();
+    $('#app-banner-nav').addClass('is-hidden');
   },
   upCallback: function() {
-    $('#app-banner-nav').show();
+    $('#app-banner-nav').removeClass('is-hidden');
   }
 })
 .addTo(ScrollDispatcher);

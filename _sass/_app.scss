@@ -144,6 +144,15 @@ h1.banner-body__name {
   }
 }
 
+.banner-nav {
+  opacity: 1;
+  transition: opacity 250ms;
+
+  &.is-hidden {
+    opacity: 0;
+  }
+}
+
 //
 // Banner navigation
 //
