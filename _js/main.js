@@ -6,7 +6,16 @@ $(window).resize(function() {
   resizeBanner();
 });
 
-$('#app-banner-menu__link--toggle').on('click', function() {
+$('#app-header-menu__toggle').on('click', function() {
+  var $headerMenu = $('#app-header-menu');
+  if ($headerMenu.hasClass('is-visible')) {
+    $headerMenu.removeClass('is-visible');
+  } else {
+    $headerMenu.addClass('is-visible');
+  }
+});
+
+$('#app-banner-menu__toggle').on('click', function() {
   var $bannerMenu = $('#app-banner-menu');
   if ($bannerMenu.hasClass('is-visible')) {
     $bannerMenu.removeClass('is-visible');
@@ -15,13 +24,12 @@ $('#app-banner-menu__link--toggle').on('click', function() {
   }
 });
 
-$('#app-header-menu__toggle').on('click', function() {
-  var $headerMenu = $('#app-header-menu');
-  if ($headerMenu.hasClass('is-visible')) {
-    $headerMenu.removeClass('is-visible');
-  } else {
-    $headerMenu.addClass('is-visible');
-  }
+$('#app-header-menu a').on('click', function() {
+  $('#app-header-menu').removeClass('is-visible');
+});
+
+$('#app-banner-menu a').on('click', function() {
+  $('#app-banner-menu').removeClass('is-visible');
 });
 
 function resizeBanner() {
