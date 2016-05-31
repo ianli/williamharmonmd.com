@@ -7,9 +7,6 @@ $color-white: #FFF;
 $color-red: #9C2401;
 $color-light-blue: #497CB3;
 
-$on-palm:          600px;
-$on-laptop:        800px;
-
 body {
   font-family: 'Roboto Slab', serif;
   color: rgba($color-white, .67);
@@ -69,6 +66,12 @@ hr.title-line {
   height: 8px;
   background-color: $color-red;
   border: none;
+
+  @include on-phone() {
+    & {
+      width: 240px;
+    }
+  }
 }
 
 //
@@ -103,6 +106,13 @@ h1.banner-body__name {
   line-height: 64px;
   font-size: 64px;
   font-weight: normal;
+
+  @include on-phone() {
+    & {
+      font-size: 48px;
+      line-height: 48px;
+    }
+  }
 }
 
 .banner-body__preface,
@@ -112,6 +122,13 @@ h1.banner-body__name {
   font-size: 32px;
   font-weight: 300;
   color: rgba($color-white, .67);
+
+  @include on-phone() {
+    & {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
 }
 
 //
