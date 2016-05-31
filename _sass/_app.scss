@@ -27,6 +27,10 @@ body {
   }
 }
 
+//
+// Text spacing
+//
+
 @for $i from 1 through 4 {
   $space: $i * 8;
 
@@ -50,6 +54,10 @@ hr.title-line {
   background-color: $color-red;
   border: none;
 }
+
+//
+// Banner
+//
 
 .banner {
   display: flex;
@@ -88,6 +96,10 @@ h1.banner-body__name {
   font-weight: 300;
   color: $color-light-blue;
 }
+
+//
+// Banner navigation
+//
 
 .banner-nav {
   position: absolute;
