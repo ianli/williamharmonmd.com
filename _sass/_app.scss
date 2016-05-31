@@ -28,6 +28,22 @@ body {
 }
 
 //
+// Links
+//
+
+a,
+a:visited,
+a:active {
+  color: $color-light-blue;
+  text-decoration: none;
+
+  &:hover {
+    color: lighten($color-light-blue, 10%);
+    text-decoration: underline;
+  }
+}
+
+//
 // Text spacing
 //
 
@@ -113,12 +129,6 @@ h1.banner-body__name {
     padding: 0 24px;
     line-height: 72px;
     font-size: 16px;
-    color: $color-light-blue;
-    text-decoration: none;
-
-    &:hover {
-      color: lighten($color-light-blue, 10%);
-    }
   }
 }
 
