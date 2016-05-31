@@ -363,10 +363,12 @@ h1.banner-body__name {
 //
 
 section {
-  padding: $section-padding-on-desktop 16px;
+  margin-top: -72px;
+  padding: ($section-padding-on-desktop + 72px) 16px;
 
   @include on-phone() {
-    padding: $section-padding-on-phone 16px;
+    margin-top: -72px;
+    padding: ($section-padding-on-phone + 72px) 16px;
   }
 }
 
