@@ -50,6 +50,23 @@ a:active {
 }
 
 //
+// Clear fix
+//
+
+.clearfix {
+  *zoom: 1;
+}
+
+.clearfix:after, .clearfix:before {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+//
 // Text spacing
 //
 
@@ -57,6 +74,7 @@ a:active {
   $space: $i * 8;
 
   hr.space-#{$space} {
+    clear: both;
     margin: 0;
     height: #{$space}px;
     // background-color: rgba(#fff, .5);
@@ -397,6 +415,44 @@ section {
       & {
         padding-left: 32px;
       }
+    }
+  }
+
+  .text-center {
+    text-align: center;
+  }
+}
+
+section.section-pictures {
+
+  .section-body.section-body--wide {
+    max-width: 840px;
+  }
+
+  .section-pictures__layout {
+    float: left;
+    width: 25%;
+    padding: 8px;
+    box-sizing: border-box;
+
+    @include on-tablet() {
+      width: 50%;
+    }
+  }
+
+  .section-pictures__frame {
+    display: block;
+    background-color: rgba(#fff, .1);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    // How to make a responsive square in CSS
+    // http://spin.atomicobject.com/2015/07/14/css-responsive-square/
+    &:after {
+      content: ' ';
+      display: block;
+      padding-bottom: 100%;
     }
   }
 }

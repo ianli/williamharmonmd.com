@@ -142,22 +142,55 @@
     </div>
   </section>
 
+  <!-- Pictures -->
+  <section
+      id="pictures"
+      class="section-pictures">
+    <div class="section-body section-body--wide clearfix">
+      <h2>Pictures</h2>
+      <hr class="space-32">
+      <hr class="title-line">
+      <hr class="space-32">
+
+      {% comment %}
+        The data for the following for-loop is in _data/pictures.yml
+      {% endcomment %}
+      {% for picture in site.data.pictures %}
+        <div class="section-pictures__layout">
+          <a
+              href="{{ picture.url }}"
+              class="section-pictures__frame"
+              style="background-image: url('{{ picture.image }}');">
+          </a>
+        </div>
+      {% endfor %}
+
+      <hr class="space-24">
+
+      <p class="text-large text-center">
+        <a href="https://goo.gl/photos/F1sUK4r2zwpdmRC8A">
+          View more pictures in the album
+          <i class="material-icons">keyboard_arrow_right</i>
+        </a>
+      </p>
+
+      <hr class="space-32">
+
+      <p style="max-width: 600px; margin: 0 auto;">
+        If you have more pictures of Dr. Harmon that you would like to share,
+        please send it to
+        <a href="mailto:williamharmonmd@gmail.com">williamharmonmd@gmail.com</a>.
+        We will add them to the album for others to see.
+      </p>
+    </div>
+  </section>
+
   {% if false %}
 
   <!-- Obituary -->
   <section id="obituary">
     <div class="section-body">
       <h2>Obituary</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
-    </div>
-  </section>
-
-  <!-- Pictures -->
-  <section id="pictures">
-    <div class="section-body">
-      <h2>Pictures</h2>
       <hr class="space-32">
       <hr class="title-line">
       <hr class="space-32">
