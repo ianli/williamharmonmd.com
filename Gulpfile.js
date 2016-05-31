@@ -72,13 +72,6 @@ function invokeBundle(watcher) {
   watcher.bundle()
     .on('error', gutil.log)
     .pipe(source(jsPaths.OUT))
-    // Buffer to create stream used by sourcemaps.
-    .pipe(buffer())
-    // Save the sourcemap in its own file.
-    // https://github.com/gulpjs/gulp/blob/master/docs/recipes/browserify-uglify-sourcemap.md
-    .pipe(sourcemaps.init({loadMaps: true}))
-        .on('error', gutil.log)
-    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(jsPaths.DEST_BUILD));
 }
 
