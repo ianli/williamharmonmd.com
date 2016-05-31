@@ -65,6 +65,59 @@ a:active {
 }
 
 //
+// Header
+//
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 24px 16px;
+  background-color: rgba($color-navy, .75);
+  opacity: 0;
+  transition: opacity 250ms;
+
+  &.is-visible {
+    opacity: 1;
+  }
+
+  .header-body {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 840px;
+  }
+
+  h1.header-title {
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin: -2px 0 -6px;
+    padding: 0;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: normal;
+    color: $color-white;
+  }
+
+  .horizontal-space {
+    display: block;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  nav {
+    flex-grow: 0;
+    flex-shrink: 0;
+
+    > a {
+      display: inline-block;
+      padding: 0 16px;
+    }
+  }
+}
+
+//
 // Banner
 //
 
@@ -243,6 +296,7 @@ section {
     line-height: 48px;
     font-size: 32px;
     font-weight: normal;
+    color: $color-white;
   }
 
   p {

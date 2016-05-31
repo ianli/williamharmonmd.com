@@ -35,9 +35,11 @@ new ScrollScene({
   triggerHook: 'onLeave',
   downCallback: function() {
     $('#app-banner-nav').addClass('is-hidden');
+    $('#app-header').addClass('is-visible');
   },
   upCallback: function() {
     $('#app-banner-nav').removeClass('is-hidden');
+    $('#app-header').removeClass('is-visible');
   }
 })
 .addTo(ScrollDispatcher);
