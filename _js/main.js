@@ -1,11 +1,9 @@
 $(function() {
   resizeBanner();
-  showBanner();
 });
 
 $(window).resize(function() {
   resizeBanner();
-  showBanner();
 });
 
 $('#app-banner-menu__link--toggle').on('click', function() {
@@ -29,10 +27,6 @@ $('#app-header-menu__toggle').on('click', function() {
 function resizeBanner() {
   var windowHeight = $(window).height();
   $('#app-banner').height(windowHeight);
-}
-
-function showBanner() {
-  $('#app-banner').addClass('is-visible');
 }
 
 var ScrollDispatcher = require('./ScrollDispatcher');
