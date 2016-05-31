@@ -23,7 +23,7 @@
       <div class="horizontal-space"></div>
 
       <nav>
-        {% include head.html %}
+        {% include nav-links.html %}
       </nav>
     </div>
   </header>
@@ -59,7 +59,7 @@
       <div
           class="banner-menu"
           id="app-banner-menu">
-        {% include head.html %}
+        {% include nav-links.html %}
       </div>
       <div
           class="banner-menu--on-phone"
@@ -75,6 +75,37 @@
     </div>
   </div>
 
+  <!-- Donations -->
+  <section id="donations">
+    <div class="section-body">
+      <h2>Donations</h2>
+      <hr class="space-32">
+      <hr class="title-line">
+      <hr class="space-32">
+
+      <p class="text-large">
+        In lieu of flowers, Dr. Harmon's family requests contributions to be made in his honor to the
+        <a href="http://www.childrenshospital.org/centers-and-services/division-of-nephrology">
+          Division of Nephrology at Boston Children's Hospital
+        </a> for clinical kidney transplant research.
+      </p>
+
+      <hr class="space-32">
+
+      <blockquote class="text-large">
+        <em>
+          Division of Nephrology<br>
+          Boston Children's Hospital
+        </em><br>
+        300 Longwood Avenue, BCH 3038<br>
+        Boston, MA 02115<br>
+        Tel 617-355-6129<br>
+      </blockquote>
+    </div>
+  </section>
+
+  {% if false %}
+
   <!-- Memorial -->
   <section id="memorial">
     <div class="section-body">
@@ -83,8 +114,10 @@
       <hr class="title-line">
       <hr class="space-32">
 
-      <p>
-        Harmon's specialties include end-stage renal disease (ESRD) and kidney transplantation and his research interests involve the pathophysiology and treatment of end-stage renal disease in children. He was one of the earliest members of the North American Pediatric Renal Transplant Cooperative Study (NAPRTCS) and developed the studies and protocols that were subsequently used as the basis for the development of the Cooperative Clinical Trials in Pediatric Transplantation (CCTPT). Harmon is a Past President of the American Society of Transplantation (AST) and is President of NAPRTCS.
+      <p class="large">
+        In lieu of flowers, Dr. Harmon's family requests contributions
+        be made in his honor to the "Division of Nephrology"
+        at Boston Children's Hospital for clinical kidney transplant research.
       </p>
     </div>
   </section>
@@ -119,6 +152,7 @@
     </div>
   </section>
 
+  {% endif %}
 
 
   <!-- Javascript -->
