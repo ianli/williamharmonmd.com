@@ -9,11 +9,20 @@ $(window).resize(function() {
 });
 
 $('#app-banner-menu__link--toggle').on('click', function() {
-  var $bannerNav = $('#app-banner-menu');
-  if ($bannerNav.hasClass('is-visible')) {
-    $bannerNav.removeClass('is-visible');
+  var $bannerMenu = $('#app-banner-menu');
+  if ($bannerMenu.hasClass('is-visible')) {
+    $bannerMenu.removeClass('is-visible');
   } else {
-    $bannerNav.addClass('is-visible');
+    $bannerMenu.addClass('is-visible');
+  }
+});
+
+$('#app-header-menu__toggle').on('click', function() {
+  var $headerMenu = $('#app-header-menu');
+  if ($headerMenu.hasClass('is-visible')) {
+    $headerMenu.removeClass('is-visible');
+  } else {
+    $headerMenu.addClass('is-visible');
   }
 });
 

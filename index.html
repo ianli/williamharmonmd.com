@@ -22,11 +22,28 @@
 
       <div class="horizontal-space"></div>
 
-      <nav>
-        {% include nav-links.html %}
+      <nav class="header-nav">
+        <div class="hidden-on-tablet">
+          {% include nav-links.html %}
+        </div>
+        <a
+            href="javascript:void(0);"
+            id="app-header-menu__toggle"
+            class="visible-on-tablet">
+          <i
+              class="material-icons"
+              style="font-size: 32px;">menu</i>
+        </a>
       </nav>
+
+      <div
+          class="header-menu"
+          id="app-header-menu">
+        {% include nav-links.html %}
+      </div>
     </div>
   </header>
+
   <div
       class="banner"
       id="app-banner">
