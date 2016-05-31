@@ -8,8 +8,8 @@ $(window).resize(function() {
   showBanner();
 });
 
-$('#banner-menu__toggle').on('click', function() {
-  var $bannerNav = $('#banner-nav');
+$('#app-banner-menu__toggle').on('click', function() {
+  var $bannerNav = $('#app-banner-nav');
   if ($bannerNav.hasClass('is-visible')) {
     $bannerNav.removeClass('is-visible');
   } else {
@@ -19,9 +19,25 @@ $('#banner-menu__toggle').on('click', function() {
 
 function resizeBanner() {
   var windowHeight = $(window).height();
-  $('#banner').height(windowHeight);
+  $('#app-banner').height(windowHeight);
 }
 
 function showBanner() {
-  $('#banner').addClass('is-visible');
+  $('#app-banner').addClass('is-visible');
 }
+
+var ScrollDispatcher = require('./ScrollDispatcher');
+var ScrollScene = require('./ScrollScene');
+var SimpleScrollScene = require('./SimpleScrollScene');
+
+new ScrollScene({
+  triggerElement: '#app-banner-body',
+  triggerHook: 'onLeave',
+  downCallback: function() {
+    $('#app-banner-temp').hide();
+  },
+  upCallback: function() {
+    $('#app-banner-temp').show();
+  }
+})
+.addTo(ScrollDispatcher);
