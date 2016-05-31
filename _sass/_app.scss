@@ -70,18 +70,18 @@ a:active {
 //
 
 .visible-on-tablet {
-  display: none;
+  display: none !important;
 
   @include on-tablet() {
-    display: block;
+    display: block !important;
   }
 }
 
 .hidden-on-tablet {
-  display: initial;
+  display: initial !important;
 
   @include on-tablet() {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -137,6 +137,13 @@ nav.header-nav {
   flex-grow: 0;
   flex-shrink: 0;
   position: relative;
+
+  a {
+    display: inline-block;
+    padding-left: 24px;
+    line-height: 32px;
+    font-size: 16px;
+  }
 }
 
 .header-menu {
@@ -170,8 +177,8 @@ nav.header-nav {
 
   > a {
     display: block;
-    padding: 8px 24px;
-    line-height: 24px;
+    padding: 0 8px;
+    line-height: 32px;
     font-size: 16px;
   }
 }
