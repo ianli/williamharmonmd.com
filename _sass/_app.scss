@@ -43,6 +43,14 @@ body {
 // Banner
 //
 
+hr.title-line {
+  margin: 0 auto;
+  width: 320px;
+  height: 8px;
+  background-color: $color-red;
+  border: none;
+}
+
 .banner {
   display: flex;
   padding: 0 32px;
@@ -62,14 +70,6 @@ body {
 
 .banner-body {
   margin: auto;
-
-  hr.midline {
-    margin: 0 auto;
-    width: 320px;
-    height: 8px;
-    background-color: $color-red;
-    border: none;
-  }
 }
 
 h1.banner-body__name {
