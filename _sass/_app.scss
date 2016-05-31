@@ -7,6 +7,9 @@ $color-white: #FFF;
 $color-red: #9C2401;
 $color-light-blue: #497CB3;
 
+$section-padding-on-desktop: 64px;
+$section-padding-on-phone: 32px;
+
 body {
   font-family: 'Roboto Slab', serif;
   color: rgba($color-white, .67);
@@ -85,7 +88,7 @@ hr.title-line {
 
 .banner {
   display: flex;
-  margin-bottom: 64px;
+  margin-bottom: $section-padding-on-desktop;
   padding: 0 32px;
   height: 800px;
   text-align: center;
@@ -98,6 +101,10 @@ hr.title-line {
 
   &.is-visible {
     opacity: 1;
+  }
+
+  @include on-phone() {
+    margin-bottom: $section-padding-on-phone;
   }
 }
 
@@ -210,7 +217,11 @@ h1.banner-body__name {
 //
 
 section {
-  padding: 64px 16px;
+  padding: $section-padding-on-desktop 16px;
+
+  @include on-phone() {
+    padding: $section-padding-on-phone 16px;
+  }
 }
 
 .section-body {
