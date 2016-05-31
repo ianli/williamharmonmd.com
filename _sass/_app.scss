@@ -1,0 +1,111 @@
+// Our variables
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+
+$color-navy: #000032;
+$color-white: #FFF;
+$color-red: #9C2401;
+$color-light-blue: #497CB3;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+body {
+  font-family: 'Roboto Slab', serif;
+  color: $color-white;
+  background-color: $color-navy;
+  -webkit-font-smoothing: antialiased;
+
+  &:after {
+    content: ' ';
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 8px;
+    background-color: $color-red;
+  }
+}
+
+@for $i from 1 through 4 {
+  $space: $i * 8;
+
+  hr.space-#{$space} {
+    margin: 0;
+    height: #{$space}px;
+    // background-color: rgba(#fff, .5);
+    background-color: transparent;
+    border: none;
+  }
+}
+
+//
+// Banner
+//
+
+.banner {
+  display: flex;
+  padding: 0 32px;
+  height: 800px;
+  text-align: center;
+  background-image: url(/images/ui/sailboat-1200x800.jpg);
+  background-size: cover;
+  background-position: center -100px;
+  background-repeat: no-repeat;
+  opacity: 0;
+  transition: opacity 250ms;
+
+  &.is-visible {
+    opacity: 1;
+  }
+}
+
+.banner-body {
+  margin: auto;
+
+  hr.midline {
+    margin: 0 auto;
+    width: 320px;
+    height: 8px;
+    background-color: $color-red;
+    border: none;
+  }
+}
+
+h1.banner-body__name {
+  margin: -9px 0 -7px;
+  padding: 0;
+  line-height: 64px;
+  font-size: 64px;
+  font-weight: normal;
+}
+
+.banner-body__preface,
+.banner-body__dates {
+  margin: -8px 0 -8px;
+  line-height: 40px;
+  font-size: 32px;
+  font-weight: 300;
+  color: $color-light-blue;
+}
+
+.banner-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+
+  a.banner-nav__link {
+    display: inline-block;
+    padding: 0 24px;
+    line-height: 72px;
+    font-size: 16px;
+    color: $color-white;
+    text-decoration: none;
+    opacity: .67;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
