@@ -217,7 +217,7 @@ h1.banner-body__name {
   right: 0;
   left: 0;
 
-  > a.banner-menu__link {
+  > a {
     display: inline-block;
     padding: 8px 24px;
     line-height: 56px;
@@ -251,7 +251,7 @@ h1.banner-body__name {
       background-color: $color-red;
     }
 
-    > a.banner-menu__link {
+    > a {
       display: inline-block;
       padding: 0 24px;
       line-height: 40px;
@@ -267,7 +267,7 @@ h1.banner-body__name {
     & {
       display: block;
 
-      > a.banner-menu__link {
+      > a {
         line-height: 40px;
       }
     }
