@@ -77,6 +77,8 @@ function invokeBundle(watcher) {
 
 gulp.task('development', ['development_js', 'jekyll']);
 
+gulp.task('default', ['development']);
+
 gulp.task('production_js', function() {
   browserify({
     entries: [jsPaths.ENTRY_POINT],
