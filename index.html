@@ -110,34 +110,6 @@
 
   <!-- Javascript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script>
-    $(function() {
-      resizeBanner();
-      showBanner();
-    });
-
-    $(window).resize(function() {
-      resizeBanner();
-      showBanner();
-    });
-
-    $('#banner-menu__toggle').on('click', function() {
-      var $bannerNav = $('#banner-nav');
-      if ($bannerNav.hasClass('is-visible')) {
-        $bannerNav.removeClass('is-visible');
-      } else {
-        $bannerNav.addClass('is-visible');
-      }
-    });
-
-    function resizeBanner() {
-      var windowHeight = $(window).height();
-      $('#banner').height(windowHeight);
-    }
-
-    function showBanner() {
-      $('#banner').addClass('is-visible');
-    }
-  </script>
+  <script src="/js/build/main.js"></script>
 </body>
 </html>
