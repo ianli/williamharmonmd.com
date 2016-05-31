@@ -1,4 +1,7 @@
-_site
-.sass-cache
-node_modules
-js
+_site/
+.sass-cache/
+node_modules/
+
+# Do not ignore the js folder because it needs to be in the repository
+# in order for GitHub Pages to serve it.
+!js/
