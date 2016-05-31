@@ -148,14 +148,14 @@ h1.banner-body__name {
 // Banner navigation
 //
 
-.banner-nav,
-.banner-menu {
+.banner-nav__menu,
+.banner-nav__menu--on-phone {
   position: absolute;
   bottom: 0;
   right: 0;
   left: 0;
 
-  > a.banner-nav__link {
+  > a.banner-nav__menu-link {
     display: inline-block;
     padding: 8px 24px;
     line-height: 56px;
@@ -165,9 +165,9 @@ h1.banner-body__name {
 
 @include on-phone() {
   // When viewing on a phone,
-  // .banner-nav becomes a toggled menu.
+  // .banner-nav__menu becomes a toggled menu.
 
-  .banner-nav {
+  .banner-nav__menu {
     bottom: 56px;
     padding: 0 16px;
     text-align: center;
@@ -189,7 +189,7 @@ h1.banner-body__name {
       background-color: $color-red;
     }
 
-    > a.banner-nav__link {
+    > a.banner-nav__menu-link {
       display: inline-block;
       padding: 0 24px;
       line-height: 40px;
@@ -198,14 +198,14 @@ h1.banner-body__name {
   }
 }
 
-.banner-menu {
+.banner-nav__menu--on-phone {
   display: none;
 
   @include on-phone() {
     & {
       display: block;
 
-      > a.banner-nav__link {
+      > a.banner-nav__menu-link {
         line-height: 40px;
       }
     }

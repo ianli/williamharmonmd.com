@@ -8,8 +8,8 @@ $(window).resize(function() {
   showBanner();
 });
 
-$('#app-banner-menu__toggle').on('click', function() {
-  var $bannerNav = $('#app-banner-nav');
+$('#app-banner-nav__menu-link--toggle').on('click', function() {
+  var $bannerNav = $('#app-banner-nav__menu');
   if ($bannerNav.hasClass('is-visible')) {
     $bannerNav.removeClass('is-visible');
   } else {
@@ -34,10 +34,10 @@ new ScrollScene({
   triggerElement: '#app-banner-body',
   triggerHook: 'onLeave',
   downCallback: function() {
-    $('#app-banner-temp').hide();
+    $('#app-banner-nav').hide();
   },
   upCallback: function() {
-    $('#app-banner-temp').show();
+    $('#app-banner-nav').show();
   }
 })
 .addTo(ScrollDispatcher);
