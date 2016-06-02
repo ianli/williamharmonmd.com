@@ -7,7 +7,7 @@ $color-white: #FFF;
 $color-red: #9C2401;
 $color-light-blue: #497CB3;
 
-$section-padding-on-desktop: 64px;
+$section-padding-on-desktop: 48px;
 $section-padding-on-phone: 32px;
 
 body {
@@ -372,11 +372,11 @@ h1.banner-body__name {
 
 section {
   margin-top: -72px;
-  padding: ($section-padding-on-desktop + 72px) 16px;
+  padding: ($section-padding-on-desktop + 72px) 16px $section-padding-on-desktop;
 
   @include on-phone() {
     margin-top: -72px;
-    padding: ($section-padding-on-phone + 72px) 16px;
+    padding: ($section-padding-on-phone + 72px) 16px $section-padding-on-phone;
   }
 }
 
@@ -404,18 +404,6 @@ section {
     padding: 0;
     line-height: 24px;
     font-size: 16px;
-
-    &.text-large {
-      line-height: 32px;
-      font-size: 20px;
-
-      @include on-phone() {
-        & {
-          line-height: 24px;
-          font-size: 16px;
-        }
-      }
-    }
   }
 
   blockquote {
@@ -430,6 +418,35 @@ section {
 
   .text-center {
     text-align: center;
+  }
+
+  .text-medium {
+    line-height: 24px;
+    font-size: 16px;
+  }
+
+  .text-large {
+    line-height: 32px;
+    font-size: 20px;
+
+    @include on-phone() {
+      & {
+        line-height: 24px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .text-larger {
+    line-height: 36px;
+    font-size: 24px;
+
+    @include on-phone() {
+      & {
+        line-height: 32px;
+        font-size: 20px;
+      }
+    }
   }
 }
 

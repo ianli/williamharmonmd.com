@@ -61,7 +61,8 @@ title: "In memory of William E. Harmon, M.D.: Stories, letters, and quotes"
     <hr class="space-32">
 
     <p class="text-large">
-      These are stories, letters, and quotes shared by family and friends of Dr. Harmon.
+      These are stories and letters shared by family and friends of Dr. Harmon.
+      We also included some quotes that Dr. Harmon often used.
     </p>
 
     <hr class="space-32">
@@ -141,6 +142,22 @@ title: "In memory of William E. Harmon, M.D.: Stories, letters, and quotes"
     </p>
   </div>
 </section>
+
+{% comment %}
+  The data for the following for-loop is in _data/quotes.csv
+{% endcomment %}
+{% for quote in site.data.quotes %}
+  <section>
+    <div class="section-body section-body--wide">
+      <hr class="title-line">
+      <hr class="space-32">
+
+      <p class="text-larger text-center">
+        {{ quote.quote }}
+      </p>
+    </div>
+  </section>
+{% endfor %}
 
 <!-- Comments -->
 {% include fb-comments.html %}
