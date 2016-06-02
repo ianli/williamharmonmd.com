@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" href="/images/ui/favicon.png">
+
+  <title>{{ page.title }}</title>
+
+  <!-- Stylesheets -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
+  <link href="/css/main.css" rel="stylesheet">
+</head>
+<body>
+
+  {% include header.html %}
+
+  {{ content }}
+
+  <!-- Javascript -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="/js/build/main.js"></script>
+
+  <!-- Facebook -->
+  {% include facebook.html %}
+
+  <!-- Analytics -->
+  {% include analytics.html %}
+
+</body>
+</html>

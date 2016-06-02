@@ -1,0 +1,33 @@
+<header id="app-header">
+  <div class="header-body">
+
+    <h1 class="header-title">
+      <a href="#">
+        William E. Harmon, M.D.
+      </a>
+    </h1>
+    
+
+    <div class="horizontal-space"></div>
+
+    <nav class="header-nav">
+      <div class="hidden-on-tablet">
+        {% include nav-links.html %}
+      </div>
+      <a
+          href="javascript:void(0);"
+          id="app-header-menu__toggle"
+          class="visible-on-tablet">
+        <i
+            class="material-icons"
+            style="font-size: 32px;">menu</i>
+      </a>
+    </nav>
+
+    <div
+        class="header-menu"
+        id="app-header-menu">
+      {% include nav-links.html %}
+    </div>
+  </div>
+</header>

@@ -1,255 +1,195 @@
 ---
-# Add front matter, so Jekyll compiles Liquid variables.
+layout: default
+title: In memory of William E. Harmon, M.D.
 ---
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <!-- Favicon -->
-  <link rel="icon" href="/images/ui/favicon.png">
-
-  <title>William E. Harmon, M.D.</title>
-
-  <!-- Stylesheets -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400,700" rel="stylesheet">
-  <link href="/css/main.css" rel="stylesheet">
-</head>
-<body>
-  <header id="app-header">
-    <div class="header-body">
-
-      <h1 class="header-title">
-        <a href="#">
-          William E. Harmon, M.D.
-        </a>
-      </h1>
-      
-
-      <div class="horizontal-space"></div>
-
-      <nav class="header-nav">
-        <div class="hidden-on-tablet">
-          {% include nav-links.html %}
-        </div>
-        <a
-            href="javascript:void(0);"
-            id="app-header-menu__toggle"
-            class="visible-on-tablet">
-          <i
-              class="material-icons"
-              style="font-size: 32px;">menu</i>
-        </a>
-      </nav>
-
-      <div
-          class="header-menu"
-          id="app-header-menu">
-        {% include nav-links.html %}
-      </div>
-    </div>
-  </header>
-
+<div
+    class="banner is-visible"
+    id="app-banner">
   <div
-      class="banner is-visible"
-      id="app-banner">
-    <div
-        class="banner-body"
-        id="app-banner-body">
-      <div class="banner-body__preface">
-        In memory of
-      </div>
-
-      <hr class="space-32">
-
-      <h1
-          class="banner-body__name"
-          id="app-banner-title">
-        William E. Harmon, M.D.
-      </h1>
-      <hr class="space-32">
-      <hr class="title-line">
-
-      <hr class="space-32">
-
-      <div class="banner-body__dates">
-        July&nbsp;31,&nbsp;1943 &mdash; May&nbsp;29,&nbsp;2016
-      </div>
+      class="banner-body"
+      id="app-banner-body">
+    <div class="banner-body__preface">
+      In memory of
     </div>
-    <div
-        class="banner-nav"
-        id="app-banner-nav">
-      <div
-          class="banner-menu"
-          id="app-banner-menu">
-        {% include nav-links.html %}
-      </div>
-      <div
-          class="banner-menu--on-phone"
-          id="app-banner-menu--on-phone">
-        <a
-            href="javascript:void(0);"
-            id="app-banner-menu__toggle">
-          <i
-              class="material-icons"
-              style="font-size: 32px;">menu</i>
-        </a>
-      </div>
+
+    <hr class="space-32">
+
+    <h1
+        class="banner-body__name"
+        id="app-banner-title">
+      William E. Harmon, M.D.
+    </h1>
+    <hr class="space-32">
+    <hr class="title-line">
+
+    <hr class="space-32">
+
+    <div class="banner-body__dates">
+      July&nbsp;31,&nbsp;1943 &mdash; May&nbsp;29,&nbsp;2016
     </div>
   </div>
 
-  <!-- Visit -->
-  <section id="visit">
-    <div class="section-body">
-      <h2>Visit</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
-
-      <p class="text-large">
-        The family of Dr. Harmon will be hosting memorial visitation hours
-        at their residence on <em>Tuesday May 31st from 7pm and 9pm</em>
-        and <em>Wednesday June 1st from 7pm to 9pm</em>.
-        Address provided upon email request.
-      </p>
+  <!-- Banner navigation -->
+  <div
+      class="banner-nav"
+      id="app-banner-nav">
+    <div
+        class="banner-menu"
+        id="app-banner-menu">
+      {% include nav-links.html %}
     </div>
-  </section>
-
-  <!-- Donations -->
-  <section id="donations">
-    <div class="section-body">
-      <h2>Donations</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
-
-      <p class="text-large">
-        In lieu of flowers, Dr. Harmon's family requests contributions to be made in his honor to the
-        <a href="http://www.childrenshospital.org/centers-and-services/division-of-nephrology">
-          "Division of Nephrology" at Boston Children's Hospital
-        </a> for "Kidney Transplant Clinical Research".
-      </p>
-
-      <hr class="space-32">
-
-      <blockquote class="text-large">
-        <em>
-          Division of Nephrology<br>
-          Boston Children's Hospital
-        </em><br>
-        300 Longwood Avenue, BCH 3038<br>
-        Boston, MA 02115<br>
-        Tel 617-355-6129<br>
-      </blockquote>
+    <div
+        class="banner-menu--on-phone"
+        id="app-banner-menu--on-phone">
+      <a
+          href="javascript:void(0);"
+          id="app-banner-menu__toggle">
+        <i
+            class="material-icons"
+            style="font-size: 32px;">menu</i>
+      </a>
     </div>
-  </section>
+  </div>
+</div>
 
-  <!-- Pictures -->
-  <section
-      id="pictures"
-      class="section-pictures">
-    <div class="section-body section-body--wide clearfix">
-      <h2>Pictures</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
+<!-- Visit -->
+<section id="visit">
+  <div class="section-body">
+    <h2>Visit</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
 
-      {% comment %}
-        The data for the following for-loop is in _data/pictures.yml
-      {% endcomment %}
-      {% for picture in site.data.pictures %}
-        <div class="section-pictures__layout">
-          <a
-              href="{{ picture.url }}"
-              class="section-pictures__frame"
-              style="background-image: url('{{ picture.image }}');">
-          </a>
-        </div>
-      {% endfor %}
+    <p class="text-large">
+      The family of Dr. Harmon will be hosting memorial visitation hours
+      at their residence on <em>Tuesday May 31st from 7pm and 9pm</em>
+      and <em>Wednesday June 1st from 7pm to 9pm</em>.
+      Address provided upon email request.
+    </p>
+  </div>
+</section>
 
-      <hr class="space-24">
+<!-- Donations -->
+<section id="donations">
+  <div class="section-body">
+    <h2>Donations</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
 
-      <p class="text-large text-center">
-        <a href="https://goo.gl/photos/F1sUK4r2zwpdmRC8A">
-          View more pictures in the album
-          <i class="material-icons">keyboard_arrow_right</i>
+    <p class="text-large">
+      In lieu of flowers, Dr. Harmon's family requests contributions to be made in his honor to the
+      <a href="http://www.childrenshospital.org/centers-and-services/division-of-nephrology">
+        "Division of Nephrology" at Boston Children's Hospital
+      </a> for "Kidney Transplant Clinical Research".
+    </p>
+
+    <hr class="space-32">
+
+    <blockquote class="text-large">
+      <em>
+        Division of Nephrology<br>
+        Boston Children's Hospital
+      </em><br>
+      300 Longwood Avenue, BCH 3038<br>
+      Boston, MA 02115<br>
+      Tel 617-355-6129<br>
+    </blockquote>
+  </div>
+</section>
+
+<!-- Pictures -->
+<section
+    id="pictures"
+    class="section-pictures">
+  <div class="section-body section-body--wide clearfix">
+    <h2>Pictures</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
+
+    {% comment %}
+      The data for the following for-loop is in _data/pictures.yml
+    {% endcomment %}
+    {% for picture in site.data.pictures %}
+      <div class="section-pictures__layout">
+        <a
+            href="{{ picture.url }}"
+            class="section-pictures__frame"
+            style="background-image: url('{{ picture.image }}');">
         </a>
-      </p>
+      </div>
+    {% endfor %}
 
-      <hr class="space-32">
+    <hr class="space-24">
 
-      <p style="max-width: 600px; margin: 0 auto;">
-        If you have more pictures of Dr. Harmon that you would like to share,
-        please send it to
-        <a href="mailto:williamharmonmd@gmail.com">williamharmonmd@gmail.com</a>.
-        We will add them to the album for others to see.
-      </p>
-    </div>
-  </section>
+    <p class="text-large text-center">
+      <a href="https://goo.gl/photos/F1sUK4r2zwpdmRC8A">
+        View more pictures in the album
+        <i class="material-icons">keyboard_arrow_right</i>
+      </a>
+    </p>
 
-  <!-- Stories -->
-  <section id="guestbook">
-    <div class="section-body">
-      <h2>Stories</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
+    <hr class="space-32">
 
-      <p class="text-large">
-        If you would like to share stories about Dr. Harmon
-        or send thoughts and prayers to Dr. Harmon's family,
-        please send them to
-        <a href="mailto:williamharmonmd@gmail.com">williamharmonmd@gmail.com</a>.
-        We will post them on this website
-        <em>unless requested otherwise</em>.
-      </p>
-    </div>
-  </section>
+    <p style="max-width: 600px; margin: 0 auto;">
+      If you have more pictures of Dr. Harmon that you would like to share,
+      please send it to
+      <a href="mailto:williamharmonmd@gmail.com">williamharmonmd@gmail.com</a>.
+      We will add them to the album for others to see.
+    </p>
+  </div>
+</section>
 
-  <!-- Comments -->
-  <section id="comments">
-    <div class="section-body">
-      <h2>Comments</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
+<!-- Stories -->
+<section id="stories">
+  <div class="section-body">
+    <h2>Stories</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
 
-      <div
-          class="fb-comments"
-          data-href="http://www.williamharmonmd.com"
-          data-width="100%"
-          data-numposts="10"
-          data-colorscheme="dark"
-          data-order-by="social"></div>
-    </div>
-  </section>
+    <p class="text-large">
+      If you would like to share stories about Dr. Harmon
+      or send thoughts and prayers to Dr. Harmon's family,
+      please send them to
+      <a href="mailto:williamharmonmd@gmail.com">williamharmonmd@gmail.com</a>.
+      We will post them on this website
+      <em>unless requested otherwise</em>.
+    </p>
+  </div>
+</section>
 
-  {% if false %}
+<!-- Comments -->
+<section id="comments">
+  <div
+      class="section-body"
+      style="min-height: 600px;">
+    <h2>Comments</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
 
-  <!-- Obituary -->
-  <section id="obituary">
-    <div class="section-body">
-      <h2>Obituary</h2>
-      <hr class="space-32">
-      <hr class="title-line">
-      <hr class="space-32">
-    </div>
-  </section>
+    <div
+        class="fb-comments"
+        data-href="http://www.williamharmonmd.com"
+        data-width="100%"
+        data-numposts="10"
+        data-colorscheme="dark"
+        data-order-by="social"></div>
+  </div>
+</section>
 
-  {% endif %}
+{% if false %}
 
+<!-- Obituary -->
+<section id="obituary">
+  <div class="section-body">
+    <h2>Obituary</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
+  </div>
+</section>
 
-  <!-- Javascript -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-  <script src="/js/build/main.js"></script>
-
-  <!-- Facebook -->
-  {% include facebook.html %}
-
-  <!-- Analytics -->
-  {% include analytics.html %}
-
-</body>
-</html>
+{% endif %}
