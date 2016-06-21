@@ -1,0 +1,63 @@
+---
+layout: default
+title: "In memory of William E. Harmon, M.D.: In the press"
+---
+<div
+    class="banner is-visible"
+    id="app-banner">
+  <div
+      class="banner-body"
+      id="app-banner-body">
+    <div class="banner-body__preface">
+      In memory of
+    </div>
+
+    <hr class="space-32">
+
+    <h1
+        class="banner-body__name"
+        id="app-banner-title">
+      William E. Harmon, M.D.
+    </h1>
+    <hr class="space-32">
+    <hr class="title-line">
+
+    <hr class="space-32">
+
+    <div class="banner-body__dates">
+      In the press
+    </div>
+  </div>
+
+  <!-- Banner navigation -->
+  {% include banner-nav.html %}
+</div>
+
+<!-- Press -->
+<section id="stories">
+  <div class="section-body">
+    <h2>In the press</h2>
+    <hr class="space-32">
+    <hr class="title-line">
+    <hr class="space-32">
+
+    <p class="text-large">
+      The following are articles that appeared in the press about Dr. William Harmon.
+    </p>
+  </div>
+</section>
+
+{% for press in site.press reversed %}
+  <section>
+    <div class="section-body">
+      <h2>
+        {{ press.title }}
+      </h2>
+      <hr class="space-32">
+      <hr class="title-line">
+      <hr class="space-32">
+
+      {{ press.content }}
+    </div>
+  </section>
+{% endfor %}
